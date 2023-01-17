@@ -1,0 +1,64 @@
+{
+  "posts": [
+    {
+      "id": 5,
+      "firstname": "sample rrrr",
+      "lastname": "sample",
+      "email": "sample@gmai.com",
+      "mobile": "09877654321",
+      "salary": "$343434"
+    },
+    {
+      "id": 6,
+      "firstname": "tttt",
+      "lastname": "ddddd",
+      "email": "ddee@hjh.lom",
+      "mobile": "0987654321",
+      "salary": "$0987654"
+    },
+    {
+      "id": 8,
+      "firstname": "qwqw",
+      "lastname": "wew",
+      "email": "wewrfwer@gmail.com",
+      "mobile": "89778",
+      "salary": "890898"
+    },
+    {
+      "id": 9,
+      "firstname": "xxx",
+      "lastname": "yyy",
+      "email": "aayyy@gmail.com",
+      "mobile": "09876543210",
+      "salary": "123456"
+    },
+    {
+      "id": 10,
+      "firstname": "kaanan",
+      "lastname": "kaanan",
+      "email": "afef",
+      "mobile": "ew",
+      "salary": "wefwe"
+    },
+    {
+      "id": 11,
+      "firstname": "rnwekjhrqjejr",
+      "lastname": "wrhjkthrjk",
+      "email": "terte@t.vrtr",
+      "mobile": "347583478",
+      "salary": "s3453"
+    },
+    {
+      "id": 12,
+      "firstname": "zzzzw2w2",
+      "lastname": "qq",
+      "email": "ww@wq.lk",
+      "mobile": "1234",
+      "salary": "9876543"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

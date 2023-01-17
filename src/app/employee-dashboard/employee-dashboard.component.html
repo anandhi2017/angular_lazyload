@@ -1,0 +1,98 @@
+
+<nav class="navbar navbar-light bg-primary">
+<div class="container-fluid mt-5 pt-5">
+    <h1>Angular curd</h1>
+    <div class="d-flex">
+        <button class="btn btn-success" (click)="clickAddEmploye()" data-toggle="modal" data-target="#exampleModal">Add Emp</button>
+    </div>
+ 
+</div>
+</nav>
+<p ><a style="color:red;" href="https://www.youtube.com/watch?v=I9mtyLg32nQ">Refer this website 
+  <b>Angular 11 CRUD with json-server | Bootstrap UI | Angular Reactive Form </b></a></p>
+  <p><a href="https://www.youtube.com/watch?v=ibn2yAomxp8">Angular 12 2021 | Routing | LazyLoading | AuthGuard | multiple router-outlet | all in one video</a></p>
+
+<!-- <p>
+  <a href="https://www.youtube.com/watch?v=ibn2yAomxp8">
+    Angular 12 2021 | Routing | LazyLoading | AuthGuard | multiple router-outlet | all in one video
+  </a>
+ </p> -->
+<table class="table table-dark table-striped mt-3 mb-5 pb-4">
+    <thead>
+      <tr>
+        <th scope="col">Emp Id</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Mobile</th>
+        <th scope="col">Salary</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of employeeData">      
+        <td>{{row.id}}</td>
+        <td>{{row.firstname}}</td>
+        <td>{{row.lastname}}</td>
+        <td>{{row.email}}</td>
+        <td>{{row.mobile}}</td>
+        <td>{{row.salary}}</td>
+        <td>
+            <button class="btn btn-warning m-1" (click)="onEdit(row)" data-toggle="modal" data-target="#exampleModal">Edit</button>
+            <button class="btn btn-danger m-1" (click)="deleteSingleEmployee(row)">Delete</button>
+        </td>
+      </tr>
+     
+    </tbody>
+  </table>
+
+  
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+       <form [formGroup]="formValue" novalidate>
+        <div class="mb-3">
+            <label  class="form-label">First Name</label>
+            <input type="text" formControlName="firstname" class="form-control" id="" placeholder="" required>
+             <!-- <div *ngIf="formValue.controls['firstname'].invalid && formValue.controls['firstname'].touched" class="alert alert-danger">
+              <div *ngIf="formValue.controls['firstname'].errors['required']">
+              Name is required.
+            </div>
+          </div>  -->
+          </div>
+          <div class="mb-3">
+            <label  class="form-label">Last Name</label>
+            <input type="text" formControlName="lastname" class="form-control" id="" placeholder="">
+       
+          </div>
+          <div class="mb-3">
+            <label  class="form-label">Email</label>
+            <input type="email" formControlName="email" class="form-control" id="" placeholder="">
+       
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Mobile</label>
+            <input type="text" formControlName="mobile" class="form-control" id="" placeholder="">
+       
+          </div>
+          <div class="mb-3">
+            <label class="form-label">salary</label>
+            <input type="text" formControlName="salary" class="form-control" id="" placeholder="">
+       
+          </div>
+       </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="cancel" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" *ngIf="showAdd" (click)="postEmployeeDetails()">Save</button>
+          <button type="button" class="btn btn-primary" *ngIf="showUpdate" (click)="updateEmployeeDetails()">Update</button>
+        </div>
+      </div>
+    </div>
+  </div>
